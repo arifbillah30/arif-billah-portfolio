@@ -1,34 +1,27 @@
-# Tunis Personal Portfolio React Template
+# Arif Billah — Full-Stack Portfolio (React)
 
-## Description
+React-based personal portfolio showcasing web apps, UI/UX, and selected projects.  
+Built on top of the **Tunis Personal Portfolio React Template** and customized with new sections, portfolio filters, and an EmailJS-powered contact form.
 
-Setup Procedure
+## ✨ Features
+- Responsive, fast, single-page app
+- Sections: Home · About · Portfolio · Blog · Contact
+- Portfolio tabs: **WEB APPS · UI/UX · VIDEO · MOCKUP**
+- Project modal with details/links
+- AOS animations
+- Toast notifications for form status
+- EmailJS + Gmail contact form (no backend needed)
+- Favicons & image assets optimized (thumbnails **895×552**)
 
-## Project setup
+## 🧰 Tech
+React · react-tabs · react-modal · react-toastify · AOS · @emailjs/browser · SCSS
 
-```
-npm install / npm install --legacy-peer-deps
-```
+---
 
-### Compiles and hot-reloads for development
+## 🚀 Getting Started
 
-```
-npm run start
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration (vue-cli)
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# arif-billah-portfolio
+### 1) Install
+```bash
+npm install
+# if you hit peer dep issues:
+# npm install --legacy-peer-deps
