@@ -4,18 +4,34 @@ import "./assets/scss/main.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import Modal from "react-modal";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+function start() {
+  const rootEl = document.getElementById("root");
+  if (!rootEl) {
+    // If this ever logs, your public/index.html is missing <div id="root"></div>
+    console.error('Root element "#root" not found.');
+    return;
+  }
 
-root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+  // Set react-modal app element once, after #root definitely exists
+  Modal.setAppElement(rootEl);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  const root = ReactDOM.createRoot(rootEl);
+  root.render(
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+
+  reportWebVitals();
+}
+
+// Ensure the DOM is parsed before we try to mount
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", start);
+} else {
+  start();
+}
