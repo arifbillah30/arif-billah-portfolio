@@ -1,5 +1,4 @@
 [build]
-  base = "react-version/tunis"   # the folder that has package.json & public/
   command = "npm run build"
   publish = "build"
 
