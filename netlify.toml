@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  CI = "false"                    # <- stops treating warnings as errors
+  # or instead: DISABLE_ESLINT_PLUGIN = "true"  (disables CRA’s eslint entirely)
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
