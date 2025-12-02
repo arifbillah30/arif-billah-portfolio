@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { useNavigate, useLocation } from "react-router-dom";
 import Hero from "../components/hero/Hero";
@@ -23,7 +23,6 @@ const HomeDark = () => {
   
   const navigate = useNavigate();
   const location = useLocation();
-  const tabPanelRef = useRef(null);
   
   const getTabIndex = () => {
     const path = location.pathname;
@@ -35,6 +34,7 @@ const HomeDark = () => {
   
   useEffect(() => {
     setTabIndex(getTabIndex());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
   
   const handleTabSelect = (index) => {
@@ -85,6 +85,7 @@ const HomeDark = () => {
         }
       };
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tabIndex]);
 
   return (

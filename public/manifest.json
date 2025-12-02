@@ -1,15 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Arif Billah",
+  "name": "Arif Billah - Full-Stack Software Engineer Portfolio",
+  "description": "Full-Stack Software Engineer specializing in React.js, Next.js, Node.js, and modern web technologies",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0F172A",
+  "background_color": "#ffffff",
+  "categories": ["portfolio", "developer", "technology"],
+  "orientation": "portrait-primary"
 }

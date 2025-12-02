@@ -6,21 +6,34 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const form = useRef();
 
-
-  console.log("svc:", process.env.REACT_APP_EMAILJS_SERVICE_ID);
-console.log("tpl:", process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-console.log("pub:", process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-
-
   const sendEmail = (e) => {
     e.preventDefault();
-  emailjs.sendForm(
-  process.env.REACT_APP_EMAILJS_SERVICE_ID,
-  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-  form.current,
-  { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
-)
-      .then(
+    
+    // Template parameters
+    const templateParams = {
+      user_name: form.current.name.value,
+      user_email: form.current.user_email.value,
+      user_subject: form.current.subject.value,
+      user_message: form.current.message.value
+    };
+    
+    // Send auto-reply to user
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      // Send notification to yourself
+      return emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_NOTIFICATION_TEMPLATE_ID,
+        templateParams,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+    })
+    .then(
         (result) => {
           toast.success("Message Sent Successfully!", {
             position: "top-right",
