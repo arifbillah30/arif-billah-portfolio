@@ -19,7 +19,7 @@ const Blog = () => {
     <>
       <div className="row">
         {blogsData.map((item) => (
-          <div key={item.id} className="col-12 col-md-6 col-lg-6 col-xl-4 mb-30">
+          <div key={item.id} className="col-12 col-md-6 col-lg-6 col-xl-4 mb-30 d-flex">
             <article className="post-container" onClick={() => openPost(item.id)}>
               <div className="post-thumb">
                 <div className="d-block position-relative overflow-hidden">
