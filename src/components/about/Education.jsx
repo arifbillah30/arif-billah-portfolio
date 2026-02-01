@@ -17,7 +17,7 @@ const educationContent = [
   {
     year: "2013 - 2015",
     degree: "Dakhil (Secondary School Certificate Equivalent)",
-    institute: "Manikdi Islami Alim Madrasah - Dhaka, Bangladesh",
+    institute: "Manikdi Islamia Alim Madrasah - Dhaka, Bangladesh",
     details: "Field of study: Science | EQF level 3. Website: https://mism.edu.bd/",
   },
 ];

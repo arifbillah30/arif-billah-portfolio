@@ -2,7 +2,7 @@ import React from "react";
 
 const experienceContent = [
   {
-    year: "01/2024 - Present",
+    year: "01/2026 - Present",
     position: "Freelance Full-Stack Web Developer",
     companyName: "Remote — Dhaka, Bangladesh",
     details:
