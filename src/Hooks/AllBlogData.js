@@ -51,7 +51,7 @@ const AllBlogData = () => {
       date: "02 November 2025",
       tag: `deep-learning, yolo, computer-vision, plant-health, image-processing`,
       description1:
-        "As a University Research Assistant at UIU, I co-authored a deep learning research paper on automated indoor plant health monitoring that was presented at the 9th International Conference on ICT for Intelligent Systems (ICTIS 2025) and accepted for publication by Springer Nature. This work addresses the growing need for automated agricultural monitoring systems.",
+        "As an Undergraduate Research Assistant at UIU, I co-authored a deep learning paper on indoor plant health monitoring, presented at ICTIS 2025 and published by Springer Nature (LNNS), supporting intelligent and automated agricultural monitoring.",
       description2:
         "The research implements YOLO (You Only Look Once) deep learning architecture to classify plants into three health categories: healthy, unhealthy, and dead. We achieved up to 96.8% classification accuracy through careful dataset curation, data augmentation strategies, and hyperparameter tuning. The model processes images in real-time, making it suitable for practical deployment in smart agriculture applications.",
       description3:
